@@ -34,17 +34,6 @@ int main()
         }
     }
 
-    // sum = 0;
-    // for(i = 0; i < 100; i++){
-    //     if((i % 10) != 0) sum += arr[i];
-    //     if(sum >= N){
-    //         printf("%d", i % 10);
-    //         j = i - 10;
-    //         break;
-    //     }
-    // }
-    // N = N - (sum - arr[i]);
-
     j = 1;
     int flag = 1;
     while(j >= 0){
@@ -59,25 +48,17 @@ int main()
         i -= 1;
         result[index] = i % 10;
         index += 1;
-        // printf("%d", i % 10);
         N = N - (sum - arr[i]);
         j = i - 10;
     }
 
     index -= 1;
-    // result[index] -= 1;
     j = 0;
     for(i = index; i >= 0; i--){
         res += result[i] * pow(10,j);
         j += 1;
     }
     printf("%ld", res);
-    // for(i = 0; i <= index; i++){
-    //     printf("%d", result[i]);
-    // }
-
-
-
 
     return 0;
 }
