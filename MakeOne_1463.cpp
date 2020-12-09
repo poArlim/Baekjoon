@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 using namespace std;
 
 vector<int> minCount;
@@ -9,7 +10,8 @@ int MakeOne(int n){
 		cout<<"0 could not be calculated."<<endl;
 		return 0;
 	}
-	if (n != -1) return minCount[n];
+
+	if (minCount[n] != -1) return minCount[n];
 	
 	int result = 1000001;
 
@@ -18,7 +20,6 @@ int MakeOne(int n){
 	result = min(result, MakeOne(n-1) + 1);
 
 	minCount[n] = result;
-
 	return result;
 }
 
@@ -27,10 +28,10 @@ int main(){
 	int N;
 
 	cin>>N;
-	minCount.resize(N+1, -1);
+	minCount.resize(N+2, -1);
 	
 	minCount[1] = 0;
 	cout<<MakeOne(N)<<endl;
-	
-    return 0;
+    
+	return 0;
 }
