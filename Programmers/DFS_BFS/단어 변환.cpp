@@ -28,6 +28,6 @@ int route(int index, string cur, string target, vector<string> &words){
 int solution(string begin, string target, vector<string> words) {
     int answer = 0;
     answer = route(-1, begin, target, words);
-    if(answer >= 999999) answer = 0;
+    if(answer >= MAX) answer = 0;
     return answer;
 }
