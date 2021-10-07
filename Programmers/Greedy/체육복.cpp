@@ -39,3 +39,4 @@ int solution(int n, vector<int> lost, vector<int> reserve) {
     answer = n - lost.size();
     return answer;
 }
+
