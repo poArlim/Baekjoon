@@ -17,10 +17,8 @@ int solution(int n, vector<int> lost, vector<int> reserve) {
             reserve.erase(reserve.begin() + r_idx);
             lost.erase(lost.begin() + l_idx);
         }
-        else{
-            if(reserve[r_idx] > lost[l_idx]) l_idx++;
-            else r_idx++;
-        }
+        else if(reserve[r_idx] > lost[l_idx]) l_idx++;
+        else r_idx++;
     }    
     
     r_idx = 0;
