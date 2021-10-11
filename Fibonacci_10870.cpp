@@ -5,8 +5,7 @@ int fibonacci(int n);
 int main(){
 	int n;
 	cin>>n;
-
-	cout<<fibonacci(n);
+	cout<<fibonacci(n)<<endl;
 	return 0;
 }
 
