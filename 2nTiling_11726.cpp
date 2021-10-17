@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int dp[1001] = {0};
+int dp[1001];
 int Tiling (int n);
 
 int main (){
